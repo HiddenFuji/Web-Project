@@ -35,7 +35,7 @@ body {
     font-size: var(--base-font-size);
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-        url('/doodle.jpg');
+        url('doodle.jpg');
     background-attachment: fixed; /* Keeps bg still while scrolling */
 }
 
