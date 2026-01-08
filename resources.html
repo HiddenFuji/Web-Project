@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized Student Resources Hub</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- 2. THE LAYOUT GRID (Makes them side-by-side) --- */
+    </style>
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1 style="font-size: 28px;">
+            Centralized Student Resources Hub
+        </h1>
+
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+
+
+        </nav>
+    </header>
+
+    <main class="resources-container">
+
+        <section class="card">
+            <a style="padding: 20px; text-decoration: none;" href="forum.html">
+                <h2><i class="fa-solid fa-comments"></i> Forum</h2>
+            </a>
+
+
+        </section>
+
+        <section class="card">
+            <a style="padding: 20px; text-decoration: none;" href="ask.html">
+                <h2><i class="fa-solid fa-circle-question"></i> Ask & Answer</h2>
+            </a>
+
+
+        </section>
+
+        <section class="card">
+            <a style="padding: 20px; text-decoration: none;" href="notes.html">
+                <h2><i class="fa-solid fa-folder-open"></i> Notes</h2>
+            </a>
+
+
+        </section>
+
+        <section class="card">
+            <a style="padding: 20px; text-decoration: none;" href="tutorials.html">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Tutorials</h2>
+            </a>
+
+
+        </section>
+
+    </main>
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <!-- Navigation update script for authentication -->
+    <script src="nav-update.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="carousel.js"></script>
+</body>
+
+</html>

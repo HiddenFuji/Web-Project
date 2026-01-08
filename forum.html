@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum / Discussions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1>Forum & Discussions</h1>
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2><i class="fa-solid fa-comments"></i> Welcome to the Forum</h2>
+            <p>
+                The Forum is a space for students to engage in meaningful discussions, share insights, and collaborate
+                on
+                various topics. Whether you're looking for help with a specific subject or want to share your knowledge,
+                this is the place to be!
+            </p>
+        </section>
+
+        <section id="createThreadSection">
+            <h2><i class="fa-solid fa-pen-to-square"></i> Create a New Thread</h2>
+
+            <div class="form-group">
+                <label for="thread-title">
+                    <i class="fa-solid fa-heading"></i> Thread Title
+                </label>
+                <input type="text" id="thread-title" placeholder="Enter your thread title">
+            </div>
+
+            <div class="form-group">
+                <label for="thread-content">
+                    <i class="fa-solid fa-align-left"></i> Content
+                </label>
+                <textarea id="thread-content" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button class="btn" id="postThreadBtn">
+                <i class="fa-solid fa-paper-plane"></i> Post Thread
+            </button>
+        </section>
+
+        <button class="btn" id="showCreateThreadBtn">
+            <i class="fa-solid fa-pen-to-square"></i> Create New Discussion
+        </button>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-fire"></i> Active Discussions</h2>
+
+            <!-- 🔧 ADDED: container for JavaScript-generated threads -->
+            <div id="discussionList">
+
+                <!-- Existing static discussions (kept for styling & fallback) -->
+                <div class="discussion-item">
+                    <h3><i class="fa-solid fa-book"></i> Discussion on Study Techniques</h3>
+                    <p>
+                        Join the conversation about the best study techniques that work for you and share your
+                        experiences!
+                    </p>
+                    <a href="#discussion">
+                        <i class="fa-solid fa-arrow-right"></i> View Discussion
+                    </a>
+                </div>
+
+                <div class="discussion-item">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Resources Project Ideas</h3>
+                    <p>
+                        Looking for inspiration? Check out these project ideas shared by your peers and contribute your
+                        own!
+                    </p>
+                    <a href="#discussion">
+                        <i class="fa-solid fa-arrow-right"></i> View Discussion
+                    </a>
+                </div>
+
+                <div class="discussion-item">
+                    <h3><i class="fa-solid fa-users"></i> Tips for Effective Group Study</h3>
+                    <p>
+                        What strategies do you use for successful group study sessions? Share your tips!
+                    </p>
+                    <a href="#discussion">
+                        <i class="fa-solid fa-arrow-right"></i> View Discussion
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--For Completed Discussions-->
+        <section class="full-width-card">
+            <h2><i class="fa-solid fa-check"></i> Completed Discussions</h2>
+
+            <!-- REQUIRED for JS -->
+            <div id="completedDiscussionList"></div>
+        </section>
+
+        <!-- 🔹 THREAD VIEW (HIDDEN BY DEFAULT) -->
+        <section id="threadView" style="display:none;">
+            <button id="backBtn" class="btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Forum
+            </button>
+
+            <h2 id="threadTitle"></h2>
+            <p id="threadContent"></p>
+            <small id="threadDate"></small>
+
+            <div id="threadActions">
+                <button id="completeThreadBtn" class="btn">
+                    <i class="fa-solid fa-check"></i> Complete Discussion
+                </button>
+
+                <button id="deleteThreadBtn" class="btn">
+                    <i class="fa-solid fa-trash"></i> Delete Discussion
+                </button>
+            </div>
+
+
+            <h3>Replies</h3>
+            <div id="replyList"></div>
+
+            <div class="form-group">
+                <label for="replyContent">Your Reply</label>
+                <textarea id="replyContent" placeholder="Write your reply..."></textarea>
+            </div>
+            <button id="postReplyBtn" class="btn">Post Reply</button>
+        </section>
+    </div>
+
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <!-- Forum's Logic-->
+    <script src="forum.js"></script>
+
+    <!-- Navigation update script for authentication -->
+    <script src="nav-update.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="transition.js"></script>
+    <script src="activity.js"></script>
+
+</body>
+
+</html>

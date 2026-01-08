@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Repository</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1>Notes Repository</h1>
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2><i class="fa-solid fa-folder-open"></i> Welcome to the Notes Repository</h2>
+            <p>
+                This section allows students to upload and download categorized notes by subject or semester. Enhance
+                your learning experience by accessing a wide range of resources shared by your peers.
+            </p>
+        </section>
+
+        <section class="card" id="uploadSection">
+            <h2><i class="fa-solid fa-upload"></i> Upload Your Notes</h2>
+
+            <div class="form-group">
+                <label for="note-title">
+                    <i class="fa-solid fa-heading"></i> Note Title
+                </label>
+                <input type="text" id="note-title" placeholder="Enter the title of your notes">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">
+                    <i class="fa-solid fa-book"></i> Subject
+                </label>
+                <input type="text" id="subject" placeholder="Enter the subject">
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <i class="fa-solid fa-file-arrow-up"></i> Upload File
+                </label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="file-upload" style="display: none;">
+                    <p style="margin: 0; color: #999;">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Click to upload or drag and drop
+                    </p>
+                </div>
+            </div>
+
+            <button class="btn" id="uploadNoteBtn">
+                <i class="fa-solid fa-cloud-upload-alt"></i> Upload Notes
+            </button>
+        </section>
+
+        <section class="card" id="notesSection">
+            <h2><i class="fa-solid fa-book-open"></i> Available Notes</h2>
+
+            <!-- JS will inject notes here -->
+            <div id="notesList"></div>
+        </section>
+
+
+        <section id="noteView" style="display:none;">
+            <button id="backToNotesBtn" class="btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Notes
+            </button>
+
+            <h2 id="viewNoteTitle"></h2>
+            <p id="viewNoteSubject"></p>
+            <div id="noteMedia"></div>
+
+            <button id="deleteNoteBtn" class="btn">
+                <i class="fa-solid fa-trash"></i> Delete Note
+            </button>
+        </section>
+    </div>
+
+    <br style="margin: 20px;">
+
+
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <script src="notes.js"></script>
+
+    <!-- Navigation update script for authentication -->
+    <script src="nav-update.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="transition.js"></script>
+    <script src="activity.js"></script>
+
+</body>
+
+</html>

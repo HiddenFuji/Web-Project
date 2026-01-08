@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials & Study Guides</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1>Tutorials & Study Guides</h1>
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="card" id="tutorialWelcome">
+            <h2><i class="fa-solid fa-graduation-cap"></i> Welcome to Tutorials & Study Guides</h2>
+            <p>
+                This section is dedicated to sharing tutorials, study guides, and learning tips. Whether you're looking
+                to improve your skills or help others, this is the right place to contribute!
+            </p>
+        </section>
+
+        <section class="card" id="tutorialForm">
+            <h2><i class="fa-solid fa-share-nodes"></i> Share a Tutorial or Study Guide</h2>
+
+            <div class="form-group">
+                <label for="tutorial-title">
+                    <i class="fa-solid fa-heading"></i> Title
+                </label>
+                <input type="text" id="tutorial-title" placeholder="Enter the title of your tutorial">
+            </div>
+
+            <div class="form-group">
+                <label for="tutorial-content">
+                    <i class="fa-solid fa-pen"></i> Content
+                </label>
+                <textarea id="tutorial-content" placeholder="Write your tutorial or guide here..."></textarea>
+            </div>
+
+            <button class="btn" id="postTutorialBtn">
+                <i class="fa-solid fa-paper-plane"></i> Submit Tutorial
+            </button>
+
+        </section>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-book"></i> Active Tutorials</h2>
+            <div id="tutorialList"></div>
+        </section>
+
+        <section class="full-width-card">
+            <h2><i class="fa-solid fa-check"></i> Completed Tutorials</h2>
+            <div id="completedTutorialList"></div>
+        </section>
+
+        <section class="card" id="tutorialView" style="display:none;">
+            <button id="backBtn" class="btn">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+
+            <h2 id="viewTitle"></h2>
+            <p id="viewContent"></p>
+            <small id="viewDate"></small>
+
+            <br><br>
+
+            <button id="completeBtn" class="btn">
+                <i class="fa-solid fa-check"></i> Mark as Completed
+            </button>
+
+            <button id="deleteBtn" class="btn">
+                <i class="fa-solid fa-trash"></i> Delete Tutorial
+            </button>
+        </section>
+
+
+
+    </div>
+
+    <br style="margin: 20px;">
+
+
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <!-- Navigation update script for authentication -->
+    <script src="nav-update.js"></script>
+    <script src="tutorial.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="transition.js"></script>
+
+</body>
+
+</html>

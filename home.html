@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized Student Resources Hub</title>
+    <link rel="icon" type="image/jpg" href="/logoo2.jpg">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky_nav">
+
+        <!-- <center><img src="/logoo.png" width="30%"></center> -->
+
+        <h1 style="font-size: 28px;">
+            Centralized Student Resources Hub
+        </h1>
+
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html" class="active">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+
+
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+
+        <section class="full-width-card">
+            <img width="45%" src="/csrh_logo_gif.gif" alt="csrh_logo">
+        </section>
+
+        <div class="carousel-outer-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <center>
+                        <video style="max-width: 950px;" width="100%" src="/group.mp4" alt="group of students" autoplay
+                            loop muted>
+                    </center>
+                    <div class="carousel-caption">
+                        <h3>Welcome to the Hub</h3>
+                        <p>Your centralized source for student research and collaboration.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="/resources.jpg" alt="Library Study">
+                    <div class="carousel-caption">
+                        <h3>Find Resources</h3>
+                        <p>Access notes, tutorials, and past year questions easily.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <center>
+                        <video style="max-width: 950px;" width="100%" src="/discussion.mp4" alt="group of students"
+                            autoplay loop muted>
+                    </center>
+                    <div class="carousel-caption">
+                        <h3>Join the Discussion</h3>
+                        <p>Connect with peers and share your knowledge in our forums.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+
+
+        <section class="full-width-card">
+            <h2>
+                <i class="fa-solid fa-chart-line"></i>
+                Overview
+            </h2>
+            <p>
+                Welcome to the Centralized Student Resources Hub, where students can collaborate, share resources, and
+                enhance their learning experience.
+            </p>
+        </section>
+
+
+        <section class="card">
+            <h2>
+                <i class="fa-solid fa-bullhorn"></i>
+                Announcements
+            </h2>
+
+            <div class="announcement">
+                <h3>
+                    <i class="fa-solid fa-comments"></i>
+                    New Forum Launch!
+                </h3>
+                <p>
+                    We are excited to announce the launch of our new forum feature, where students can engage in
+                    discussions.
+                </p>
+            </div>
+
+            <div class="announcement">
+                <h3>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Upcoming Resources Fair
+                </h3>
+                <p>
+                    Join us for the upcoming Resources fair on March 15th. Sign up to showcase your projects!
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>
+                <i class="fa-solid fa-fire"></i>
+                Featured Discussions
+            </h2>
+
+            <div class="discussion">
+                <h3>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Best Study Techniques
+                </h3>
+                <p>
+                    Share your tips and tricks for effective studying!
+                </p>
+            </div>
+
+            <div class="discussion">
+                <h3>
+                    <i class="fa-solid fa-flask"></i>
+                    Resources Project Ideas
+                </h3>
+                <p>
+                    Looking for inspiration? Check out these project ideas shared by your peers.
+                </p>
+            </div>
+        </section>
+
+        <br style="margin: 20px;">
+
+    </div>
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <script src="nav-update.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="carousel.js"></script>
+    <script src="transition.js"></script>
+</body>
+
+</html>

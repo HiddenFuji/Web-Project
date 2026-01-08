@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask & Answer</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1>Ask & Answer</h1>
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2><i class="fa-solid fa-circle-question"></i> Welcome to Ask & Answer</h2>
+            <p>
+                This section is dedicated to quick help and advice from your peers. Whether you have a question about a
+                specific topic or need guidance, feel free to ask!
+            </p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-pen-to-square"></i> Ask a Question</h2>
+
+            <div class="form-group">
+                <label for="question-title">
+                    <i class="fa-solid fa-heading"></i> Question Title
+                </label>
+                <input type="text" id="question-title" placeholder="Enter your question title">
+            </div>
+
+            <div class="form-group">
+                <label for="question-text">
+                    <i class="fa-solid fa-align-left"></i> Your Question
+                </label>
+                <textarea id="question-text" placeholder="Write your question here..."></textarea>
+            </div>
+
+            <button class="btn" id="postQuestionBtn">
+                <i class="fa-solid fa-paper-plane"></i> Submit Question
+            </button>
+        </section>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-comments"></i> Active Questions</h2>
+            <div id="questionList"></div>
+        </section>
+
+        <section class="card">
+            <h2><i class="fa-solid fa-check"></i> Answered Questions</h2>
+            <div id="answeredList"></div>
+        </section>
+
+        <section id="questionView" style="display:none;">
+            <button id="backBtn" class="btn">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+
+            <h2 id="viewTitle"></h2>
+            <p id="viewText"></p>
+            <small id="viewDate"></small>
+
+            <hr>
+
+            <h3>Answers</h3>
+            <div id="answerList"></div>
+
+            <textarea id="answerInput" placeholder="Write your answer..."></textarea>
+            <button id="postAnswerBtn" class="btn">
+                <i class="fa-solid fa-reply"></i> Post Answer
+            </button>
+
+            <button id="markAnsweredBtn" class="btn">
+                <i class="fa-solid fa-check"></i> Mark as Answered
+            </button>
+
+            <button id="deleteQuestionBtn" class="btn" style="background:red;">
+                <i class="fa-solid fa-trash"></i> Delete Question
+            </button>
+        </section>
+
+
+
+    </div>
+    <br style="margin: 20px;">
+
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <script src="ask.js"></script>
+
+    <!-- Navigation update script for authentication -->
+    <script src="nav-update.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="transition.js"></script>
+    <script src="activity.js"></script>
+
+</body>
+
+</html>

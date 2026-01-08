@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky_nav">
+        <h1>
+            Login & Sign Up
+        </h1>
+        <nav aria-label="Main navigation">
+            <!-- Home -->
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </a>
+
+            <!-- Resources -->
+            <div class="nav-dropdown">
+                <a href="resources.html">
+                    <i class="fa-solid fa-layer-group"></i> Resources ▾
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="forum.html" class="nav-link">
+                        <i class="fa-solid fa-comments"></i> Forum
+                    </a>
+
+                    <a href="ask.html" class="nav-link">
+                        <i class="fa-solid fa-question"></i> Ask & Answer
+                    </a>
+
+                    <a href="notes.html" class="nav-link">
+                        <i class="fa-solid fa-book"></i> Notes
+                    </a>
+
+                    <a href="tutorials.html" class="nav-link">
+                        <i class="fa-solid fa-chalkboard-user"></i> Tutorials
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i> Profile
+            </a>
+
+            <!-- Login -->
+            <a href="auth.html" class="active">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </a>
+        </nav>
+    </header>
+
+    <div class="container auth-page">
+
+        <div class="auth-card-wrapper">
+            <section>
+                <div class="auth-toggle">
+                    <button id="showLoginBtn" class="active">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </button>
+                    <button id="showSignupBtn">
+                        <i class="fa-solid fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+
+                <div id="loginForm" class="auth-form active">
+                    <h2><i class="fa-solid fa-right-to-bracket"></i> Welcome Back!</h2>
+                    <p>Login to access your profile.</p>
+
+                    <div class="form-group">
+                        <label for="loginEmail"><i class="fa-solid fa-envelope"></i> Email</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+
+                    <button class="btn" id="loginBtn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                </div>
+
+                <div id="signupForm" class="auth-form">
+                    <h2><i class="fa-solid fa-user-plus"></i> Create Account</h2>
+                    <p>Join our community today!</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signupName"><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupEmail"><i class="fa-solid fa-envelope"></i> Email</label>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signupPhone"><i class="fa-solid fa-phone"></i> Phone</label>
+                            <input type="tel" id="signupPhone" oninput="this.value = this.value.replace(/[^0-9-]/g, '')"
+                                placeholder="013-12345678" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupStudentId"><i class="fa-solid fa-hashtag"></i> Student ID</label>
+                            <input type="text" id="signupStudentId" placeholder="Student ID" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signUpBirthDate"><i class="fa-solid fa-calendar-days"></i> Birth of Date</label>
+                        <input type="date" id="signUpBirthDate" placeholder="BirthDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupDepartment"><i class="fa-solid fa-building-columns"></i> Department</label>
+                        <input type="text" id="signupDepartment" placeholder="Department" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signupPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                            <input type="password" id="signupPassword" placeholder="Password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupConfirmPassword"><i class="fa-solid fa-lock"></i> Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+
+
+
+                    <div style="margin-bottom: 30px;">
+                        <input type="checkbox" id="signUpcheckBox" name="signUpcheckBox" value="confirm">
+                        <label for="signUpcheckBox"> I confirm all of my details.</label><br>
+                    </div>
+
+                    <button class="btn" id="signupBtn"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="sticky_footer">
+        © 2025 Centralized Student Resources Hub. All Rights Reserved.
+    </footer>
+
+    <!-- External JavaScript for authentication -->
+    <script src="auth.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="transition.js"></script>
+</body>
+
+
+</html>
