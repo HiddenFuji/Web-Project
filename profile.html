@@ -29,7 +29,8 @@
                     <i class="fa-solid fa-layer-group"></i> Resources ▾
                 </a>
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" id="dropdown-menu">
+                    >
                     <a href="forum.html" class="nav-link">
                         <i class="fa-solid fa-comments"></i> Forum
                     </a>
@@ -73,8 +74,7 @@
 
         <section class="card">
             <h2>Profile Information</h2>
-            <img src="data:image/png;base64,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"
-                alt="Profile Picture" class="profile-pic">
+           
             <div class="info-row">
                 <label><i class="fa-solid fa-id-card"></i> Name:</label>
                 <p>John Doe</p>

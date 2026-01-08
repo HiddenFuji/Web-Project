@@ -30,13 +30,15 @@
 body {
     font-family: 'Archivo Black', 'Arial', sans-serif;
     background-color: var(--bg-color);
-    max-width: 100%; /* Changed from 80% to handle responsiveness better, container handles width */
+    max-width: 100%;
+    /* Changed from 80% to handle responsiveness better, container handles width */
     margin: 0 auto;
     font-size: var(--base-font-size);
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
         url('doodle.jpg');
-    background-attachment: fixed; /* Keeps bg still while scrolling */
+    background-attachment: fixed;
+    /* Keeps background still while scrolling */
 }
 
 a {
@@ -47,7 +49,9 @@ a {
 /* =========================================
    3. TYPOGRAPHY
    ========================================= */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Archivo Black', 'Arial', sans-serif;
     color: var(--text-dark);
 }
@@ -76,44 +80,31 @@ p {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    width: 90%; /* Responsive width */
+    width: 90%;
+    /* Responsive width */
 }
 
 /* The Card/Section Style */
-section, .card {
+section,
+.card {
     background-color: var(--white);
     margin-bottom: 20px;
     padding: 40px;
     border-radius: var(--border-radius);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 2px solid black; /* Prepare for hover border */
-    
-    /* Flex alignment for "Bento" feel */
+    border: 2px solid black;
+
+    /* Flex alignment "Bento"  */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    /* Animation setup */
+
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Desktop Grid Layout */
-@media (min-width: 992px) {
-    .container {
-        max-width: 1200px;
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 Columns */
-        gap: 40px;
-    }
 
-    /* Full Width Utility */
-    .container section:first-child,
-    .full-width-card {
-        grid-column: 1 / -1 !important;
-    }
-}
 
 .resources-container {
     display: grid;
@@ -167,12 +158,13 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-nav a.active, .active_link {
+nav a.active,
+.active_link {
     background-color: var(--white);
     color: var(--primary-color);
 }
 
-/* Dropdowns (Kept for legacy support) */
+/* Dropdowns  */
 .nav-dropdown {
     position: relative;
     display: inline-block;
@@ -201,7 +193,7 @@ nav a.active, .active_link {
     background-color: #f0f0f0;
 }
 
-nav > .nav-dropdown:hover > .dropdown-menu {
+nav>.nav-dropdown:hover>.dropdown-menu {
     display: block;
 }
 
@@ -210,22 +202,29 @@ nav > .nav-dropdown:hover > .dropdown-menu {
    ========================================= */
 
 /* Content Lists */
-.announcement, .discussion, .question-item, .note-item, .tutorial-item {
+.announcement,
+.discussion,
+.question-item,
+.note-item,
+.tutorial-item {
     padding: 15px 20px;
     border-bottom: 1px solid #f0f0f0;
     width: 100%;
-    text-align: left; /* Override section center alignment */
+    text-align: left;
+    /* Override section center alignment */
     transition: all 0.2s ease-in-out;
     border-left: 4px solid transparent;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.announcement:last-child, .discussion:last-child {
+.announcement:last-child,
+.discussion:last-child {
     border-bottom: none;
 }
 
-.announcement h3, .discussion h3 {
+.announcement h3,
+.discussion h3 {
     color: var(--primary-color);
     font-size: 24px;
     margin-bottom: 8px;
@@ -287,7 +286,8 @@ nav > .nav-dropdown:hover > .dropdown-menu {
     margin-bottom: 8px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -309,13 +309,6 @@ nav > .nav-dropdown:hover > .dropdown-menu {
 
 .form-row .form-group {
     flex: 1;
-}
-
-@media (max-width: 600px) {
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
 }
 
 /* File Input */
@@ -341,7 +334,7 @@ nav > .nav-dropdown:hover > .dropdown-menu {
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     background-color: #ddd;
-    border: 2px solid black; /* As requested in original style */
+    border: 2px solid black;
     grid-column: 1 / -1;
 }
 
@@ -396,7 +389,8 @@ nav > .nav-dropdown:hover > .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    width: 60px; /* Adjusted size */
+    width: 60px;
+    /* Adjusted size */
     height: 60px;
     font-size: 20px;
     cursor: pointer;
@@ -411,20 +405,23 @@ nav > .nav-dropdown:hover > .dropdown-menu {
     background-color: rgba(40, 116, 209, 0.8);
 }
 
-.prev-btn { left: 0; }
-.next-btn { right: 0; }
-
-@media (max-width: 768px) {
-    .carousel-outer-container { height: 250px; }
-    .carousel-caption { padding: 15px; }
+.prev-btn {
+    left: 0;
 }
+
+.next-btn {
+    right: 0;
+}
+
 
 /* =========================================
    9. ANIMATIONS & EFFECTS
    ========================================= */
 
 /* Card Lift & Shadow */
-section:hover, .card:hover, .full-width-card:hover {
+section:hover,
+.card:hover,
+.full-width-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(40, 116, 209, 0.15);
     border-color: var(--primary-color);
@@ -433,17 +430,22 @@ section:hover, .card:hover, .full-width-card:hover {
 }
 
 /* Icon Bounciness inside Cards */
-section h2 i, .card h2 i, .full-width-card h2 i {
+section h2 i,
+.card h2 i,
+.full-width-card h2 i {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-section:hover h2 i, .card:hover h2 i, .full-width-card:hover h2 i {
+section:hover h2 i,
+.card:hover h2 i,
+.full-width-card:hover h2 i {
     transform: scale(1.2) rotate(15deg);
     color: var(--accent-color);
 }
 
 /* List Item Slide Effect */
-.announcement:hover, .discussion:hover {
+.announcement:hover,
+.discussion:hover {
     background-color: #f8f9fa;
     transform: translateX(10px);
     border-left: 4px solid var(--accent-color);
@@ -451,11 +453,13 @@ section:hover h2 i, .card:hover h2 i, .full-width-card:hover h2 i {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.announcement:hover h3, .discussion:hover h3 {
+.announcement:hover h3,
+.discussion:hover h3 {
     color: var(--primary-color);
 }
 
-.announcement:hover h3 i, .discussion:hover h3 i {
+.announcement:hover h3 i,
+.discussion:hover h3 i {
     transform: scale(1.2) rotate(15deg);
     color: var(--accent-color);
 }
@@ -503,7 +507,8 @@ body.exiting::before {
     width: 100%;
     padding: 40px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    border: 2px solid black; /* Kept from original */
+    border: 2px solid black;
+    /* Kept from original */
     text-align: left;
 }
 
@@ -590,26 +595,37 @@ footer {
     font-size: 14px;
     border-radius: 20px 20px 0px 0px;
     z-index: 999;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
 }
 
 .sticky_footer {
     position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centers fixed element */
+    transform: translateX(-50%);
+    /* Centers fixed element */
     width: 90%;
     max-width: 1200px;
 }
 
 @keyframes slideOutRight {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 @keyframes slideInLeft {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .email-link {
@@ -632,4 +648,69 @@ footer {
 .team-table th {
     background-color: #f4f4f4;
     font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+
+    .sticky_nav h1 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #dropdown-menu {
+        display: none;
+
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .team-table {
+        font-size: 13px;
+
+    }
+
+    .carousel-caption h3 {
+        font-size: 16px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
+
+    }
+
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 Columns */
+        gap: 40px;
+    }
+
+    .container section:first-child,
+    .full-width-card {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carousel-outer-container {
+        height: 250px;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+    }
 }
